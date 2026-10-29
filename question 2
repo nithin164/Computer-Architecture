@@ -1,0 +1,30 @@
+
+def logical_left_shift(binary, positions):
+    print("\nLogical Left Shift")
+    print("Original:", binary)
+
+    for i in range(positions):
+        # Shift left and insert 0 at the right
+        binary = binary[1:] + '0'
+        print(f"After shift {i + 1}: {binary}")
+
+    print("Final result:", binary)
+
+
+def logical_right_shift(binary, positions):
+    print("\nLogical Right Shift")
+    print("Original:", binary)
+
+    for i in range(positions):
+        # Shift right and insert 0 at the left
+        binary = '0' + binary[:-1]
+        print(f"After shift {i + 1}: {binary}")
+
+    print("Final result:", binary)
+
+
+# (a) Logical left shift by 3 positions
+logical_left_shift('10110110', 3)
+
+# (b) Logical right shift by 3 positions
+logical_right_shift('11010100', 3)
